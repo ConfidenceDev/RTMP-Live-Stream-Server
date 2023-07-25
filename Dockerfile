@@ -8,6 +8,7 @@ COPY app.js /app/
 # Install packages
 RUN npm install
 # Expose ports for RTMP (1935) and HTTP (8000)
+ENV HTTP 8000
 EXPOSE 1935
 EXPOSE 8000
 # Start server
