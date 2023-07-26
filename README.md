@@ -23,8 +23,7 @@ npm run start
 
 2. Publish stream:
 
-- Push your video stream to the url: rtmp://localhost/live/<stream-name>
-  Eg: rtmp://localhost/live/stream
+- Push your video stream to the url, where "stream" is just the unique name subcribers can listen on to play stream, can be changed to anything: rtmp://localhost/live/stream
 
 3. Watch Stream:
 
