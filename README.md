@@ -21,13 +21,12 @@ npm install
 npm run start
 ```
 
-3. RTMP Stream:
+2. Publish stream:
 
-- Start the rtmp server to allow subscribers watch streams
-- <a href="https://github.com/ConfidenceDev/RTMP-Live-Stream-Server">https://github.com/ConfidenceDev/RTMP-Live-Stream-Server</a>
-- Update <b>rtmpUrl</b> in <b>app.js</b> code if RTMP server is not running on localhost (Eg: If running rtmp server in a container, change rtmp url with conatiner IP Address and port or setup a docker network)
+- Push your video stream to the url: rtmp://localhost/live/<stream-name>
+  Eg: rtmp://localhost/live/stream
 
-4. Watch Stream:
+3. Watch Stream:
 
 - Use any client that can play rtmp stream and pass the url:
   <b>rtmp://localhost/live/stream</b>
@@ -48,3 +47,9 @@ docker build -t <image-name> .
 ```
 docker run -d -p 1935:1935 -p 8000:8000 --name <container-name> <image-name>:latest
 ```
+
+3. Publishing streams
+
+- You can create a docker network and use conatiner name in the rtmpUrl to push streams, Eg: rtmp://rtmp-container-name/live/stream
+
+- You can Use container IP Address as well, use the command below to view IP Address and update accordingly with rtmp port, Eg: rtmp://172.17.0.3:1935/live/stream"
