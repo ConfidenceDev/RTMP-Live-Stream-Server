@@ -35,7 +35,7 @@ npm run start
 
 <b>Docker</b>
 
-1. build docker image
+1. Build docker image: ensure you are in the project directory
 
 ```
 docker build -t <image-name> .
